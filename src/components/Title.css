@@ -1,0 +1,53 @@
+.Title {
+    color:white;
+    font-size: 22px;
+    font-display: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    padding: 0.5rem;
+    margin: 1rem 0;
+    border-radius: 12px;
+    background-color: #404040;
+}
+    .TarihB{
+        position:relative;
+        left:1.5%;
+        text-decoration: underline;
+
+
+    }
+    .AçıklamaB{
+        position:relative;
+        right: 30px;
+        flex-basis: 10%;
+        
+        
+       
+    }
+    .BorçB{
+        position:relative;
+        
+
+       
+    }
+    .AlacakB{
+        position:relative;
+        
+       
+    }
+    .BorçbakiyeB{
+        position:relative;
+        
+
+       
+    }
+    .AlacakbakiyeB{
+        position:relative;
+        
+
+        right: 20px;
+       
+    }
+

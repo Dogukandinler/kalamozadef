@@ -1,0 +1,37 @@
+.NewRecords-items {
+    background-color: #ffffff36;
+    padding: 0.011px;
+    border-radius: 12px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+    align-items: center;
+    align-items: center;
+
+    
+}
+.NewRecords-items button {
+    font: inherit;
+    cursor: pointer;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid #ffffff36;
+    background-color: #ffffff36;
+    color: white;
+    border-radius: 12px;
+    margin-right: 1rem;
+  }
+  
+  .NewRecords-items button:hover,
+  .NewRecords-items button:active {
+    background-color: #5e5e5e77;
+    border-color: #5e5e5e77;
+  }
+  
+  .NewRecords-items button.alternative {
+    color: #220131;
+    border-color: transparent;
+    background-color: transparent;
+  }
+  
+  .NewRecords-items.alternative:hover,
+  .NewRecords-items.alternative:active {
+    background-color: #ddb3f8 ;
+  }

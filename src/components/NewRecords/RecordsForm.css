@@ -1,0 +1,44 @@
+
+.Form--items {
+    display: flex;
+    color:white;
+    font-display: center;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.7rem ;
+    padding: 0.5rem;
+    padding-left: 0;
+    border-radius: 12px;
+}
+
+    .Form-Date input {
+    position: relative;
+    font: inherit;
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    left: 20px;
+    right: 15px;
+
+  }
+  
+  .Form-Açıklama input {
+
+    position: relative;
+    font: inherit;
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 501px;
+  }
+  .Form-Tutar input {
+
+    position: relative;
+    font: inherit;
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 100px;
+
+  } 
+
