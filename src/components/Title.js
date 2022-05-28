@@ -5,13 +5,14 @@ import KalamozaFilter from "./KalamozaFilter";
 const Title = () => {
 
   const [filteredYear,setFilteredYear] = useState("2022");
-  const filterChangeHandlery = (selectedYear) =>{
-    setFilteredYear(selectedYear);  
+  const filterChangeHandler = (selectedYear) =>{
+    setFilteredYear(selectedYear);
+    console.log(selectedYear)
     
   };
   return (
     <div className="Title">
-      <KalamozaFilter selected={filteredYear} onChangeFilter={filterChangeHandlery}></KalamozaFilter>
+      <KalamozaFilter selected={filteredYear} onChangeFilter={filterChangeHandler}></KalamozaFilter>
       <div className="TarihB"></div>
       <div className="AçıklamaB">Açıklama</div>
       <div className="BorçB">Borç</div>

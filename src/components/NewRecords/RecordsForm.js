@@ -5,9 +5,10 @@ const RecordsForm = (props) => {
   const [enteredExplanation, setEnteredExplanation] = useState("");
   const [enteredAmounth, setEnteredAmounth] = useState("");
   const [enteredDate, setEnteredDate] = useState("");
+  const [enteredSelection,setEnteredSelection] = useState("");
 
   const dropDownAddChangeHandler=(event) => {
-    props.onChangeAdd(event.target.value);
+    setEnteredSelection(event.target.value);
 }
 
   const explanationChangeHandler = (event) => {
@@ -24,8 +25,10 @@ const RecordsForm = (props) => {
     console.log(enteredExplanation);
     console.log(enteredAmounth);
     console.log(enteredDate);
+    console.log(enteredSelection);
 
     const recordData={
+      Selection : enteredSelection,
       explanation: enteredExplanation,
       amounth : enteredAmounth,
       date : enteredDate
