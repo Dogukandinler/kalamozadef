@@ -22,19 +22,19 @@
     }
     .Açıklama{
         position:relative;
-        flex-basis: 25.0%;
+        flex-basis: 37%;
     }
     .Borç{
         position:relative;
-        flex-basis: 16.4%;
+        flex-basis: 19.8%;
     }
     .Alacak{
         position:relative;
-        flex-basis: 17.5%;
+        flex-basis: 18.5%;
     }
     .Borçbakiye{
         position:relative;
-        flex-basis: 19.4%;
+        flex-basis: 17.5%;
     }
     .Alacakbakiye{
         position:relative;

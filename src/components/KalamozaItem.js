@@ -12,8 +12,7 @@ const KalamozaItem = (props) => {
           <KalamozaDate date={props.date} />
         </div>
         <div className="Açıklama">{props.explanation}</div>
-        <div className="Borç">{props.debt}₺</div>
-        <div className="Alacak">{props.claim}₺</div>
+        <div className="Borç">{props.debtclaim}₺</div>
         <div className="Borçbakiye">{props.debtBlance}₺</div>
         <div className="Alacakbakiye">{props.claimBlance}₺</div>
       </div>
