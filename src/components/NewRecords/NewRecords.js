@@ -1,13 +1,9 @@
-import React,{useState} from "react";
+import React from "react";
 import RecordsForm from "./RecordsForm";
 import "./NewRecords.css"
 
 const NewRecords = (props) => {
 
-  const [SelectOne,setSelectedOne] = useState("2022");
-  const dropDownAddChangeHandler = (selectedOne) =>{
-    setSelectedOne(selectedOne);  
-  }
   
 
   const saveRecordDataHandler = (enteredRecordData) =>{
@@ -21,7 +17,7 @@ const NewRecords = (props) => {
   }
   return (
     <div className="NewRecords-items">
-      <RecordsForm onSaveRecordData={saveRecordDataHandler} onChangeAdd={dropDownAddChangeHandler} ></RecordsForm>
+      <RecordsForm onSaveRecordData={saveRecordDataHandler} ></RecordsForm>
     </div>
   );
 };
