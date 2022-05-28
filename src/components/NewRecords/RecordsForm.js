@@ -3,25 +3,49 @@ import "./RecordsForm.css";
 
 const RecordsForm = () => {
 
+
+
+  /*
   const[enteredExplanation,setEnteredExplanation]=useState("");
   const[enteredAmounth,setEnteredAmounth]=useState("");
   const[enteredDate,setEnteredDate]=useState("");
+  */
+
+  const [userInput,setUserInput] = useState(
+    {
+      enteredExplanation :'',
+      enteredAmounth :'',
+      enteredDate :'',
+     }
+  );
   
   const explanationChangeHandler = (event) =>{
-    setEnteredExplanation(event.target.value);
+    setUserInput((prevState) =>{
+      return{
+      ...prevState,
+      enteredExplanation : event.target.value,
+    }
+    }); 
   };
   const amounthChangeHandler = (event) =>{
-    setEnteredAmounth(event.target.value);
+    setUserInput((prevState) =>{
+      return{
+      ...prevState,
+      enteredAmounth : event.target.value,
+    } 
+    }); 
   };
   const dateChangeHandler = (event) =>{
-    setEnteredDate(event.target.value); 
+    setUserInput((prevState) =>{
+      return{
+      ...prevState,
+      enteredDate : event.target.value,
+    }
+    }); 
   };
   const submitHandler = (event) =>{
      event.preventDefault();
-     console.log(enteredExplanation);
-     console.log("enteredExplanation");
-     console.log(enteredAmounth);
-     console.log(enteredDate);
+     console.log(userInput) ;
 
   }
    
