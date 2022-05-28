@@ -1,8 +1,17 @@
+import React,{ useState } from "react";
+import KalamozaFilter from "./KalamozaFilter";
 import KalamozaItem from "./KalamozaItem";
+   
 
 const Records = (props) => {
+
+  const [filteredYear,setFilteredYear] = useState("2022");
+  const filterChangeHandler = selectedYear =>{
+    setFilteredYear(selectedYear);
+  }
   return (
     <div>
+      <KalamozaFilter selected={filteredYear} onChangeFilter={filterChangeHandler}></KalamozaFilter>
       <KalamozaItem
         date={props.items[0].date}
         explanation={props.items[0].explanation}
