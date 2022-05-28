@@ -18,6 +18,7 @@
     border-radius: 6px;
     border: 1px solid #ccc;
     left: 20px;
+    width: 110px;
 
   }
   
@@ -37,7 +38,16 @@
     padding: 0.5rem;
     border-radius: 6px;
     border: 1px solid #ccc;
-    width: 100px;
+    width: 110px;
 
   } 
+
+  .Selectadd{
+    position: relative;
+    padding: 0.7rem;
+    width: 140px;
+    border: 1px solid #ccc;
+    background-color: white;
+    border-radius: 6px;
+}
 

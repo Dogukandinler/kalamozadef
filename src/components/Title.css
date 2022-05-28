@@ -20,25 +20,27 @@
     }
     .AçıklamaB{
         position:relative;
-        right: 30px;
-        flex-basis: 10%;
+        right: 210px;
         
         
        
     }
     .BorçB{
         position:relative;
+        right: 100px;
         
 
        
     }
     .AlacakB{
         position:relative;
+        right: 65px;
         
        
     }
     .BorçbakiyeB{
         position:relative;
+        right: 30px;
         
 
        

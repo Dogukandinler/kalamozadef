@@ -1,9 +1,17 @@
-import React from "react";
+import React,{useState} from "react";
 import "./Title.css";
+import KalamozaFilter from "./KalamozaFilter";
 
 const Title = () => {
+
+  const [filteredYear,setFilteredYear] = useState("2022");
+  const filterChangeHandlery = (selectedYear) =>{
+    setFilteredYear(selectedYear);  
+    
+  };
   return (
     <div className="Title">
+      <KalamozaFilter selected={filteredYear} onChangeFilter={filterChangeHandlery}></KalamozaFilter>
       <div className="TarihB"></div>
       <div className="AçıklamaB">Açıklama</div>
       <div className="BorçB">Borç</div>

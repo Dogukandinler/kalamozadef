@@ -4,6 +4,13 @@ import "./NewRecords.css"
 
 const NewRecords = (props) => {
 
+  const [filteredYear,setFilteredYear] = useState("2022");
+  const filterChangeHandlery = (selectedYear) =>{
+    setFilteredYear(selectedYear);  
+    console.log(selectedYear)
+  }
+  
+
   const saveRecordDataHandler = (enteredRecordData) =>{
     const recordData = {
       ...enteredRecordData,

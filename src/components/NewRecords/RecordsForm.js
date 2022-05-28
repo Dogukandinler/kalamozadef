@@ -1,11 +1,14 @@
 import React, { useState } from "react";
-import Records from "../Records";
 import "./RecordsForm.css";
 
 const RecordsForm = (props) => {
   const [enteredExplanation, setEnteredExplanation] = useState("");
   const [enteredAmounth, setEnteredAmounth] = useState("");
   const [enteredDate, setEnteredDate] = useState("");
+
+  const dropDownAddChangeHandler=(event) => {
+    props.onChangeAdd(event.target.value);
+}
 
   const explanationChangeHandler = (event) => {
     setEnteredExplanation(event.target.value);
@@ -53,6 +56,12 @@ const RecordsForm = (props) => {
             onChange={explanationChangeHandler}
             type="text"
           ></input>
+        </div>
+        <div>
+              <select className='Selectadd' value={props.selected} onChange={dropDownAddChangeHandler}>
+                 <option value="Borç">Borç </option>
+                 <option value="Alacak">Alacak </option>
+              </select> 
         </div>
         <div className="Form-Tutar">
           <input
