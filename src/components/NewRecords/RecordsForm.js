@@ -22,16 +22,13 @@ const RecordsForm = (props) => {
   };
   const submitHandler = (event) => {
     event.preventDefault();
-    console.log(enteredExplanation);
-    console.log(enteredAmounth);
-    console.log(enteredDate);
-    console.log(enteredSelection);
+
 
     const recordData={
       Selection : enteredSelection,
       explanation: enteredExplanation,
-      amounth : parseFloat(enteredAmounth),
-      date : new Date(enteredDate)
+      amounth : enteredAmounth,
+      date : enteredDate
     }
 
     props.onSaveRecordData(recordData)
