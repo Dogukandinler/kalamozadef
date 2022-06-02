@@ -1,10 +1,12 @@
 import "./KalamozaItem.css";
 import React from "react";
 import KalamozaDate from "./KalamozaDate";
-import Card from "./UI/Card";
+import Card from "../UI/Card";
 
 
 const KalamozaItem = (props) => {
+
+
   return (
     <Card>
       <div className="kalamozaItems">

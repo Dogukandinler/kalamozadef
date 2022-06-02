@@ -1,0 +1,16 @@
+.p{
+    color: rgb(255, 255, 255);
+    font-size: 4em;
+    left: 7em;
+    text-align: center;
+}
+.checks-list{
+    padding: 0;
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 0em;
+    margin-block-end:0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+}

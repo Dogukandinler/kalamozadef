@@ -1,7 +1,7 @@
 import React,{useState} from "react";
-import KalamozaItem from "./KalamozaItem";
-import Card from "./UI/Card";
+import Card from "../UI/Card";
 import Title from "./Title";
+import KalamozaList from "./KalamozaList";
 
 
 const Records = (props) => {
@@ -16,30 +16,15 @@ const Records = (props) => {
   const filteredChecks = props.items.filter(checks =>{
     return checks.date.getFullYear().toString()===filteredYear;
   });
-
-  const sortByDate = (a, b) => {
-    return a.date - b.date;
-  }
-
-
-
+ 
   return (
     
     
     <Card>
       <Title filterChange={filteredYearHandler}></Title>
-      {
-      filteredChecks.sort(sortByDate).map((checks) =>(
-        <KalamozaItem
-        key ={checks.id}
-        date= {checks.date}
-        explanation={checks.explanation}
-        debtclaim={checks.debtclaim}
-        debtBlance={checks.debtBlance}
-        claimBlance={checks.claimBlance}
-        selectionCD={checks.selectionCD}
-        />
-      ))}
+      <KalamozaList items={filteredChecks}/>
+
+      
     </Card>
      
   );

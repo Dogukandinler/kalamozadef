@@ -1,5 +1,5 @@
 import "./App.css"
-import Records from './components/Records';
+import Records from './components/Kalamoza/Records';
 import NewRecords from './components/NewRecords/NewRecords';
 import React,{useState} from "react";
 
@@ -13,8 +13,8 @@ const DUMMY_CHECKS=[
         { id: "8",company:"", date: new Date(2020, 3, 28), explanation:"Satış" ,debtclaim:600, debtBlance:"",claimBlance:"",selectionCD:"Alacak"},
         { id: "9",company:"", date: new Date(2022, 3, 20), explanation:"Satış" ,debtclaim:600, debtBlance:"",claimBlance:"",selectionCD:"Alacak"},
         { id: "10",company:"", date: new Date(2021, 3, 28), explanation:"Satış" ,debtclaim:600, debtBlance:"",claimBlance:"",selectionCD:"Alacak"},
-        { id: "11",company:"", date: new Date(2018, 6, 28), explanation:"Satış" ,debtclaim:600, debtBlance:"",claimBlance:"",selectionCD:"Alacak"},
-        { id: "12",company:"", date: new Date(2018, 3, 28), explanation:"Satış" ,debtclaim:600, debtBlance:"",claimBlance:"",selectionCD:"Alacak"},
+        { id: "11",company:"", date: new Date(2020, 6, 28), explanation:"Satış" ,debtclaim:600, debtBlance:"",claimBlance:"",selectionCD:"Alacak"},
+        { id: "12",company:"", date: new Date(2020, 3, 28), explanation:"Satış" ,debtclaim:600, debtBlance:"",claimBlance:"",selectionCD:"Alacak"},
  
 ]
 
