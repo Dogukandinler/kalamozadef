@@ -28,7 +28,7 @@ const RecordsForm = (props) => {
       Selection : enteredSelection,
       explanation: enteredExplanation,
       amounth : enteredAmounth,
-      date : enteredDate
+      date : new Date(enteredDate)
     }
 
     props.onSaveRecordData(recordData)
@@ -46,7 +46,7 @@ const RecordsForm = (props) => {
             type="date"
             value={enteredDate}
             onChange={dateChangeHandler}
-            min="2015-01-01"
+            min="2018-01-01"
           ></input>
         </div>
         <div className="Form-Açıklama">

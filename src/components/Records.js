@@ -6,26 +6,33 @@ import Title from "./Title";
 
 const Records = (props) => {
 
-  const [filteredYear, setFilterYear] = useState("");
+  const [filteredYear, setFilterYear] = useState("2022");
 
   const filteredYearHandler =(FilteredYear) =>{
    setFilterYear(FilteredYear);
   
   };
 
-  const filteredExpenses = props.items.filter(expense =>{
-    return expense.date.getFullYear().toString()===filteredYear;
+  const filteredChecks = props.items.filter(checks =>{
+    return checks.date.getFullYear().toString()===filteredYear;
   });
 
+  const sortByDate = (a, b) => {
+    return a.date - b.date;
+  }
+
+
+
   return (
-    <div>
-    <Title filterChange={filteredYearHandler}></Title>
+    
+    
     <Card>
+      <Title filterChange={filteredYearHandler}></Title>
       {
-      filteredExpenses.map((checks) =>(
+      filteredChecks.sort(sortByDate).map((checks) =>(
         <KalamozaItem
         key ={checks.id}
-        date={checks.date}
+        date= {checks.date}
         explanation={checks.explanation}
         debtclaim={checks.debtclaim}
         debtBlance={checks.debtBlance}
@@ -34,7 +41,7 @@ const Records = (props) => {
         />
       ))}
     </Card>
-    </div> 
+     
   );
 };
 
