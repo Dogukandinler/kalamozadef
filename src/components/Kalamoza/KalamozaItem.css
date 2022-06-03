@@ -12,6 +12,20 @@
 
   }
 
+  .kalamozaItemsb {
+    color: white;
+    font-display: center;
+    flex-basis: 5%;
+    display: flex;
+    align-items:center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    padding: 0.2rem;
+    margin: 1rem 0;
+    border-radius: 100px;
+    background-color: #01621470
+
+  }
+
   
 
     .Tarih{
