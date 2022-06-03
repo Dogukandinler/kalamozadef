@@ -9,6 +9,7 @@
     padding: 0.5rem;
     padding-left: 0;
     border-radius: 12px;
+    
 }
 
     .Form-Date input {
@@ -26,7 +27,7 @@
 
     position: relative;
     font: inherit;
-    padding: 0.5rem;
+    padding: 0.6rem;
     border-radius: 6px;
     border: 1px solid #ccc;
     width: 501px;

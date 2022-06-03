@@ -35,3 +35,15 @@
   .NewRecords-items.alternative:active {
     background-color: #ddb3f8 ;
   }
+
+  .button1 {
+
+    font: inherit;
+    cursor: pointer;
+    padding: 0.4rem 1.5rem;
+    border: 1px solid #404040;
+    background-color: #404040;
+    color: white;
+    border-radius: 12px;
+    margin-right: 1rem;
+  }

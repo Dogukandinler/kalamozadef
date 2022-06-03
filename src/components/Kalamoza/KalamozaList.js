@@ -23,7 +23,7 @@ const KalamozaList = (props) => {
           claimBlance={checks.claimBlance}
           selection={checks.selection}
           />
-        ))};
+        ))}
     </ul>
       }
 

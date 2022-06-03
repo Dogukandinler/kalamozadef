@@ -23,8 +23,6 @@ const Records = (props) => {
     <Card>
       <Title filterChange={filteredYearHandler}></Title>
       <KalamozaList items={filteredChecks}/>
-
-      
     </Card>
      
   );
