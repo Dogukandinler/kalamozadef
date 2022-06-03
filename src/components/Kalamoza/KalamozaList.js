@@ -8,7 +8,7 @@ const KalamozaList = (props) => {
       }
 
       if (props.items.length===0){
-        return <p className="p">No expenses found</p>;
+        return <p className="p">No Records found</p>;
     }
      
     return <ul className="checks-list"> 
