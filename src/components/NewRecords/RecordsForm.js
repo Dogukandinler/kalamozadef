@@ -27,7 +27,7 @@ const RecordsForm = (props) => {
     const recordData={
       selection : enteredSelection,
       explanation: enteredExplanation,
-      debtclaim : enteredAmounth,
+      debtclaim : parseInt(enteredAmounth),
       date : new Date(enteredDate)
     }
 

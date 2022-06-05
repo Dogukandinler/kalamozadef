@@ -4,6 +4,7 @@ import KalamozaDate from "./KalamozaDate";
 import Card from "../UI/Card";
 
 const KalamozaItem = (props) => {
+  
   const [isClaim, setIsClaim] = useState(false);
 
   useEffect(() => {
@@ -18,7 +19,7 @@ const KalamozaItem = (props) => {
     <Card>
       <div className={`kalamozaItems ${isClaim ? "kalamozaItemsb" : ""}`}>
         <div className="Tarih">
-          <KalamozaDate date={props.date} />  
+          <KalamozaDate date={props.date} />
         </div>
         <div className="Açıklama">{props.explanation}</div>
         <div className="Borç">{props.debtclaim}₺</div>
