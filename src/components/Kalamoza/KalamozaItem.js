@@ -5,15 +5,37 @@ import Card from "../UI/Card";
 
 const KalamozaItem = (props) => {
   
+  const [claimBlanceAll,AlacakSet] = useState(0)
+  const [debtBlanceAll,BorcSet] = useState(0)
   const [isClaim, setIsClaim] = useState(false);
 
+  const alacakBorcekle  = () => {
+    if (props.selection === "Alacak"){
+        BorcSet(props.debtclaim) }
+
+    else {
+      AlacakSet(props.debtclaim)}
+
+  }
   useEffect(() => {
-    const onClickHeader = () => {
+    const onBackgroundColor = () => {
       if (props.selection === "Alacak") setIsClaim(!isClaim);
       else setIsClaim(isClaim);
     };
-    onClickHeader();
+   onBackgroundColor();
+   alacakBorcekle();
+
   }, []);
+  const Ekleee =() =>{
+
+    const bData={
+      borc : claimBlanceAll,
+      alacak: debtBlanceAll,
+    }
+  
+    props.ustetası(bData)
+
+  };
 
   return (
     <Card>
@@ -23,8 +45,9 @@ const KalamozaItem = (props) => {
         </div>
         <div className="Açıklama">{props.explanation}</div>
         <div className="Borç">{props.debtclaim}₺</div>
-        <div className="Borçbakiye">{props.debtBlance}₺</div>
-        <div className="Alacakbakiye">{props.claimBlance}₺</div>
+        <div className="Borçbakiye">{claimBlanceAll}₺</div>
+        <div className="Alacakbakiye">{debtBlanceAll}₺</div>
+        <button onClick={Ekleee}>Ekle</button>
       </div>
     </Card>
   );
