@@ -9,14 +9,14 @@
     
 }
 .NewRecords-items button {
-    font: inherit;
-    cursor: pointer;
-    padding: 0.5rem 1.5rem;
-    border: 1px solid #ffffff36;
-    background-color: #ffffff36;
-    color: white;
-    border-radius: 12px;
-    margin-right: 1rem;
+  font: inherit;
+  cursor: pointer;
+  padding: 0.4rem 0.4rem;
+  border: 1px solid #404040;
+  background-color: #404040;
+  color: white;
+  border-radius: 12px;
+  margin-right: 1rem;
   }
   
   .NewRecords-items button:hover,
@@ -36,14 +36,30 @@
     background-color: #ddb3f8 ;
   }
 
-  .button1 {
-
+  .KayıtEkleGöster button {
     font: inherit;
     cursor: pointer;
-    padding: 0.4rem 1.5rem;
-    border: 1px solid #404040;
-    background-color: #404040;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid #ffffff36;
+    background-color: #ffffff36;
     color: white;
     border-radius: 12px;
     margin-right: 1rem;
+  }
+  
+  .KayıtEkleGöster button:hover,
+  .KayıtEkleGöster button:active {
+    background-color: #5e5e5e77;
+    border-color: #5e5e5e77;
+  }
+  
+  .KayıtEkleGöster button.alternative {
+    color: #220131;
+    border-color: transparent;
+    background-color: transparent;
+  }
+  
+  .KayıtEkleGöster.alternative:hover,
+  .KayıtEkleGöster.alternative:active {
+    background-color: #ddb3f8 ;
   }

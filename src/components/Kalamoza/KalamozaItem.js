@@ -14,8 +14,6 @@ const KalamozaItem = (props) => {
     onBackgroundColor();
   }, []);
 
-
-
   return (
     <Card>
       <div className={`kalamozaItems ${isClaim ? "kalamozaItemsb" : ""}`}>
@@ -26,9 +24,7 @@ const KalamozaItem = (props) => {
         <div className="Borç">{props.debtclaim}₺</div>
         <div className="Borçbakiye">{!isClaim ? props.sum + "₺" : ""}</div>
         <div className="Alacakbakiye">{isClaim ? props.sum + "₺" : ""}</div>
-        <button className="" onClick={props.deleteItem}>
-          Sil
-        </button>
+        <button onClick={props.deleteItem} className="btn11"> X </button>
       </div>
     </Card>
   );

@@ -17,8 +17,8 @@ const NewRecords = (props) => {
     
   }
   return ( 
-    <div className="flex-end">
-    <button type="button" className="button1" onClick={()=>setShow(!show)}>{show ===true? "X":"Kayıt Ekle"}</button>
+    <div className="KayıtEkleGöster">
+    <button type="button"  onClick={()=>setShow(!show)}>{show ===true? "X":"Kayıt Ekle"}</button>
      <div className="NewRecords-items">
       {show &&<RecordsForm onSaveRecordData={saveRecordDataHandler} ></RecordsForm> }
     </div> 
