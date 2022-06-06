@@ -1,60 +1,76 @@
-import React  from "react";
+import React from "react";
 import KalamozaItem from "./KalamozaItem";
 import "./KalamozaList.css";
 
 const KalamozaList = (props) => {
   const sortByDate = (a, b) => {
     return a.date - b.date;
-    
   };
 
   if (props.items.length === 0) {
     return <p className="p">No Records found</p>;
   }
 
-  const toplamborceklehandler =(addedust,borcas) =>{
-   let bData ={...addedust}; 
-   console.log(bData)
-  }
-
-  // function islemYap() {
-  //   let araDegerAlacak = 0;
-  //   let araDegerBorc = 0;
-  //   let alacakDizi = [];
-  //   let borcDizi = [];
+  const toplamborceklehandler = (addedust, borcas) => {
+    let bData = { ...addedust };
+    console.log(bData);
+  };
 
 
-  //   for (let i = 0; i < props.items.length; i++) {
-  //     if (props.items[i].selection === "Alacak") {
-  //       araDegerAlacak = araDegerAlacak + props.items[i].debtclaim;
-  //       alacakDizi.push(araDegerAlacak);
-          
-  //     } else {
-  //       araDegerBorc = araDegerBorc + props.items[i].debtclaim;
-  //       borcDizi.push(araDegerBorc);
-        
-  //     }
-  //   }
-  //   return [alacakDizi,borcDizi];
-    
-  // }
+  const deleteItem = (id) => {
+    const tmp = props.allItems.filter((x) => x.id !== id);
+    props.setChecks(tmp);
+  };
 
-  // console.log(islemYap());
+  const getSum = (index, selection) => {
+    let arr = props.items;
+    if (selection === "Alacak") {
+      arr = arr.filter((x) => x.selection === selection);
+    } else if (selection === "Borç") {
+      arr = arr.filter((x) => x.selection === selection);
+    }
+    return arr
+      .sort(sortByDate)
+      .slice(0, index)
+      .reduce((partialSum, a) => partialSum + a.debtclaim, 0);
+  };
 
   return (
     <ul className="checks-list">
-      {props.items.sort(sortByDate).map((checks) => (
-        <KalamozaItem
-          ustetası={toplamborceklehandler}
-          key={checks.id}
-          date={checks.date}
-          explanation={checks.explanation}
-          debtclaim={checks.debtclaim}
-          debtBlance={checks.debtBlance}
-          claimBlance={checks.claimBlance}
-          selection={checks.selection}
-        />
-      ))}
+      {props.items
+        .filter((x) => x.selection !== "Alacak")
+        .sort(sortByDate)
+        .map((checks, index) => (
+          <KalamozaItem
+            deleteItem={() => deleteItem(checks.id)}
+            ustetası={toplamborceklehandler}
+            key={checks.id}
+            date={checks.date}
+            sum={getSum(index + 1, "Borç")}
+            explanation={checks.explanation}
+            debtclaim={checks.debtclaim}
+            debtBlance={checks.debtBlance}
+            claimBlance={checks.claimBlance}
+            selection={checks.selection}
+          />
+        ))}
+      {props.items
+        .filter((x) => x.selection === "Alacak")
+        .sort(sortByDate)
+        .map((checks, index) => (
+          <KalamozaItem
+            deleteItem={() => deleteItem(checks.id)}
+            ustetası={toplamborceklehandler}
+            key={checks.id}
+            date={checks.date}
+            sum={getSum(index + 1, "Alacak")}
+            explanation={checks.explanation}
+            debtclaim={checks.debtclaim}
+            debtBlance={checks.debtBlance}
+            claimBlance={checks.claimBlance}
+            selection={checks.selection}
+          />
+        ))}
     </ul>
   );
 };
