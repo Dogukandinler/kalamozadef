@@ -3,6 +3,7 @@ import RecordsForm from "./RecordsForm";
 import "./NewRecords.css"
 
 const NewRecords = (props) => {
+  
    
   const  [show,setShow] =useState(false)
 

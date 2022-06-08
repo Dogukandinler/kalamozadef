@@ -11,10 +11,6 @@ const KalamozaList = (props) => {
     return <p className="p">No Records found</p>;
   }
 
-  const toplamborceklehandler = (addedust, borcas) => {
-    let bData = { ...addedust };
-    console.log(bData);
-  };
 
 
   const deleteItem = (id) => {
@@ -43,14 +39,11 @@ const KalamozaList = (props) => {
         .map((checks, index) => (
           <KalamozaItem
             deleteItem={() => deleteItem(checks.id)}
-            ustetası={toplamborceklehandler}
             key={checks.id}
             date={checks.date}
             sum={getSum(index + 1, "Borç")}
             explanation={checks.explanation}
             debtclaim={checks.debtclaim}
-            debtBlance={checks.debtBlance}
-            claimBlance={checks.claimBlance}
             selection={checks.selection}
           />
         ))}
@@ -60,14 +53,11 @@ const KalamozaList = (props) => {
         .map((checks, index) => (
           <KalamozaItem
             deleteItem={() => deleteItem(checks.id)}
-            ustetası={toplamborceklehandler}
             key={checks.id}
             date={checks.date}
             sum={getSum(index + 1, "Alacak")}
             explanation={checks.explanation}
             debtclaim={checks.debtclaim}
-            debtBlance={checks.debtBlance}
-            claimBlance={checks.claimBlance}
             selection={checks.selection}
           />
         ))}

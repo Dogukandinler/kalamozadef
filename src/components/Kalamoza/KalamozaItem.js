@@ -14,6 +14,7 @@ const KalamozaItem = (props) => {
     onBackgroundColor();
   }, []);
 
+  console.log(!isClaim ? props.sum + "₺" : "")
   return (
     <Card>
       <div className={`kalamozaItems ${isClaim ? "kalamozaItemsb" : ""}`}>
