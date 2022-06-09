@@ -1,8 +1,11 @@
 .OpenScreenText{
-    margin-top: 6rem;   
+    margin-top: 2rem;   
     color: rgb(255, 255, 255);
-    font-size: 5em;
     text-align: center;
+    font-size: 5rem;
+    font-weight: 700;
+    letter-spacing: -.06em;
+    font-family: "Rajdhani", sans-serif;
 }
 .OpenScreenButton{
     align-items: center;
@@ -11,13 +14,14 @@
     display: block;
     margin: auto;
     cursor: pointer;
-    font-size: 3em;
-    margin-top: 14rem;
+    font-size: 2em;
+    margin-top: 6rem;
     padding: 0.5rem 1.5rem;
-    border: 1px solid #ffffff36;
-    background-color: #ffffff36;
-    color: white;
+    border: 1px solid #f68B01;
+    background-color: #f68B01;
+    color: rgb(236, 40, 40);
     border-radius: 12px;
+
 }
   
   .OpenScreenButton button:hover,
@@ -38,12 +42,28 @@
   }
 .link:visited{
 
-    color: white;
+    font-family: "Rajdhani", sans-serif;
+    color: rgb(0, 0, 0);
     text-decoration-color: rgba(255, 0, 0, 0);
+    font-weight: bold;
 }
 .link:link{
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration-color: rgba(255, 0, 0, 0);
+    font-weight: bold;
+    font-family: "Rajdhani", sans-serif;
+}
+.icon{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:3rem;
+  height: 200px;
+  width: 200px;
+  border-radius: 8px;
+  align-items: center;
+  display: block;
+
+  
 }
     
   
