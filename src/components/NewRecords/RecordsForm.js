@@ -58,7 +58,9 @@ const RecordsForm = (props) => {
           ></input>
         </div>
         <div>
-              <select className='Selectadd' value={props.selected} onChange={dropDownAddChangeHandler}>
+              <select className='Selectadd'
+               value={props.selected}
+               onChange={dropDownAddChangeHandler}>
                  <option value="Borç">Borç </option>
                  <option value="Alacak">Alacak </option>
               </select> 
