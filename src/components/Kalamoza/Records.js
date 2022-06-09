@@ -16,7 +16,10 @@ const Records = (props) => {
 
   return (
     <Card>
-      <Title filterChange={filteredYearHandler}></Title>
+      <Title
+        setSelectedFilter={props.setSelectedFilter}
+        filterChange={filteredYearHandler}
+      ></Title>
       <KalamozaList
         setChecks={props.setChecks}
         allItems={props.items}
